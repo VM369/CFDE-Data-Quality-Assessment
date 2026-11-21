@@ -1,0 +1,18 @@
+{
+  "rules": {
+    "Missing required":   {"area": "Missing values",  "pass": 0,    "fail": 0.01, "why": "A required field must be filled. Any gap is a Check; more than 1% is a Fail."},
+    "Missing optional":   {"area": "Missing values",  "pass": 0.25, "fail": 9.99, "why": "Optional fields can be empty by design. Above 25% is a Check. Never a Fail."},
+    "Hidden missing":     {"area": "Missing values",  "pass": 0.01, "fail": 0.1,  "why": "Text like NA in a cell hides a missing value from software that only looks for empty cells."},
+    "Empty columns":      {"area": "Missing values",  "pass": 0,    "fail": 9.99, "why": "A column with no values at all. Shown for information, never a Fail."},
+    "Half-empty columns": {"area": "Missing values",  "pass": 0.1,  "fail": 9.99, "why": "Columns where more than half the rows are empty. Shown for information, never a Fail."},
+    "Duplicate rows":     {"area": "Duplicates",      "pass": 0,    "fail": 0.01, "why": "Exact copy of another row."},
+    "Duplicate IDs":      {"area": "Duplicates",      "pass": 0,    "fail": 0.01, "why": "An ID or key should appear once."},
+    "Mixed types":        {"area": "Standard format", "pass": 0,    "fail": 0.01, "why": "Text inside a number column breaks number parsing."},
+    "Label variants":     {"area": "Standard format", "pass": 0.01, "fail": 0.05, "why": "The same label written different ways splits one group into two."},
+    "Extra spaces":       {"area": "Standard format", "pass": 0.01, "fail": 0.05, "why": "Leading or trailing spaces make equal values look different."},
+    "Wrong format":       {"area": "Standard format", "pass": 0,    "fail": 0.01, "why": "Value breaks the format rule written in the check."},
+    "Not allowed value":  {"area": "Standard format", "pass": 0,    "fail": 0.01, "why": "Value not in the allowed list from the standard or data dictionary."},
+    "Format style":       {"area": "Standard format", "pass": 0,    "fail": 9.99, "why": "Value is right but written in an unusual style (for example 1188.0 for a whole number). Never a Fail."}
+  },
+  "score_weights": {"required": 0.8, "optional": 0.2}
+}

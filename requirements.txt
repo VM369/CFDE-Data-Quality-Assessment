@@ -1,0 +1,6 @@
+pandas>=2.0
+openpyxl>=3.0
+requests
+lxml
+# Optional: pyreadr reads the MoTrPAC .rda files (only needed for: run motrpac).
+# Install it separately with: pip install pyreadr
